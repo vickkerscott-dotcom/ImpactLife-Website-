@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impact Insurance - Life Insurance & Financial Protection</title>
+    <meta name="description" content="Comprehensive life insurance and financial protection services in Africa. Affordable premiums, quick claims, and nationwide reach.">
+    <meta name="keywords" content="life insurance, micro-insurance, savings, investment, Africa, claims, protection">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-maroon': '#8B1538',
+                        'brand-beige': '#F5F5DC',
+                        'brand-dark': '#2C1810'
+                    },
+                    fontFamily: {
+                        'heading': ['Montserrat', 'sans-serif'],
+                        'body': ['Lato', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Lato:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Enhanced Hero Slider Styles */
+        .hero-overlay-base {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.15);
+            z-index: 1;
+        }
+
+        .hero-text-overlay {
+            position: relative;
+            z-index: 2;
+            backdrop-filter: blur(8px);
+            background: rgba(255, 255, 255, 0.88);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            border-radius: 1.75rem;
+            padding: 2rem 2.5rem;
+            width: clamp(320px, 90vw, 680px);
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        .hero-text-overlay.dark-mode {
+            background: rgba(139, 21, 56, 0.65);
+            color: white;
+        }
+
+        .hero-heading {
+            font-size: clamp(2rem, 5vw, 4rem);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .hero-subheading {
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            opacity: 0.8;
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+            font-family: 'Lato', sans-serif;
+        }
+
+        .hero-cta-btn {
+            display: inline-block;
+            background: #8B1538;
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 0.75rem;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            transform: scale(1);
+        }
+
+        .hero-cta-btn:hover {
+            background: rgba(139, 21, 56, 0.9);
+            transform: scale(1.05);
+            box-shadow: 0 8px 24px rgba(139, 21, 56, 0.3);
+        }
+
+        .hero-cta-btn.secondary {
+            background: rgba(255, 255, 255, 0.9);
+            color: #8B1538;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .hero-cta-btn.secondary:hover {
+            background: white;
+            color: #8B1538;
+        }
+
+        .hero-nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 30;
+            padding: 0.75rem;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(4px);
+            border: none;
+            color: white;
+            font-size: 1.25rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 3rem;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-nav-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .slide-indicator {
+            width: 0.75rem;
+            height: 0.75rem;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.4);
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .slide-indicator.active {
+            background: white;
+            transform: scale(1.25);
+        }
+
+        .slide-indicator:hover {
+            background: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Slide transitions */
+        .slide {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            z-index: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .slide.active {
+            opacity: 1;
+            z-index: 10;
+        }
+
+        /* Fade in animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero-text-overlay {
+                padding: 1.5rem 2rem;
+                margin: 0 1rem;
+            }
+
+            .hero-nav-btn {
+                width: 2.5rem;
+                height: 2.5rem;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body class="font-body text-gray-800">
+    <!-- Header -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center">
+                <img src="assets/images/logo.png" alt="Impact Insurance Logo" class="h-12 w-auto" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjQwIiB2aWV3Qm94PSIwIDAgMTIwIDQwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cmVjdCB3aWR0aD0iMTIwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjOEIxNTM4Ii8+Cjx0ZXh0IHg9IjYwIiB5PSIyNSIgZm9udC1mYW1pbHk9Ik1vbnRzZXJyYXQiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtd2VpZ2h0PSI2MDAiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5JTVBBQ1QgSU5TVVJBTkNFPC90ZXh0Pgo8L3N2Zz4K'">
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="text-gray-700 hover:text-brand-maroon font-medium">Home</a>
+                <a href="about.html" class="text-gray-700 hover:text-brand-maroon font-medium">About</a>
+                <a href="products.html" class="text-gray-700 hover:text-brand-maroon font-medium">Products</a>
+                <a href="customers.html" class="text-gray-700 hover:text-brand-maroon font-medium">Customers</a>
+                <a href="careers.html" class="text-gray-700 hover:text-brand-maroon font-medium">Careers</a>
+                <a href="blog.html" class="text-gray-700 hover:text-brand-maroon font-medium">Blog</a>
+                <a href="contact.html" class="text-gray-700 hover:text-brand-maroon font-medium">Contact</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="#" class="bg-brand-maroon text-white px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors">Get a Quote</a>
+                <button class="md:hidden text-gray-700" id="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div class="md:hidden bg-white border-t border-gray-200 hidden" id="mobile-menu">
+            <div class="px-4 py-2 space-y-2">
+                <a href="#home" class="block text-gray-700 hover:text-brand-maroon font-medium py-2">Home</a>
+                <a href="about.html" class="block text-gray-700 hover:text-brand-maroon font-medium py-2">About</a>
+                <a href="products.html" class="block text-gray-700 hover:text-brand-maroon font-medium py-2">Products</a>
+                <a href="customers.html" class="block text-gray-700 hover:text-brand-maroon font-medium py-2">Customers</a>
+                <a href="careers.html" class="block text-gray-700 hover:text-brand-maroon font-medium py-2">Careers</a>
+                <a href="blog.html" class="block text-gray-700 hover:text-brand-maroon font-medium py-2">Blog</a>
+                <a href="contact.html" class="block text-gray-700 hover:text-brand-maroon font-medium py-2">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Enhanced Hero Slider -->
+        <section id="hero" class="relative h-screen flex items-center overflow-hidden">
+            <!-- Slide 1 -->
+            <div class="slide active" data-slide="1">
+                <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('assets/images/hero-life-insurance.jpg');"></div>
+                <div class="hero-overlay-base"></div>
+                <div class="relative z-20 container mx-auto px-4 h-full flex items-center justify-start">
+                    <div class="hero-text-overlay">
+                        <h1 class="hero-heading">
+                            Protect what matters most
+                        </h1>
+                        <p class="hero-subheading">
+                            Flexible cover for families and professionals across Africa
+                        </p>
+                        <a href="#" class="hero-cta-btn">
+                            Get a Quote
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide" data-slide="2">
+                <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('assets/images/hero-micro-insurance.jpg');"></div>
+                <div class="hero-overlay-base"></div>
+                <div class="relative z-20 container mx-auto px-4 h-full flex items-center justify-end">
+                    <div class="hero-text-overlay dark-mode">
+                        <h1 class="hero-heading">
+                            Small premiums, big protection
+                        </h1>
+                        <p class="hero-subheading">
+                            Accessible cover for traders and MSMEs across Africa
+                        </p>
+                        <a href="#" class="hero-cta-btn secondary">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide" data-slide="3">
+                <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('assets/images/hero-savings-investment.jpg');"></div>
+                <div class="hero-overlay-base"></div>
+                <div class="relative z-20 container mx-auto px-4 h-full flex items-center justify-start">
+                    <div class="hero-text-overlay dark-mode">
+                        <h1 class="hero-heading">
+                            Grow your future today
+                        </h1>
+                        <p class="hero-subheading">
+                            Disciplined savings with life cover options
+                        </p>
+                        <a href="#" class="hero-cta-btn secondary">
+                            Explore Plans
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="slide" data-slide="4">
+                <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('assets/images/hero-group-corporate.jpg');"></div>
+                <div class="hero-overlay-base"></div>
+                <div class="relative z-20 container mx-auto px-4 h-full flex items-center justify-end">
+                    <div class="hero-text-overlay">
+                        <h1 class="hero-heading">
+                            Benefits that empower your people
+                        </h1>
+                        <p class="hero-subheading">
+                            Tailored group life and credit life solutions
+                        </p>
+                        <a href="#" class="hero-cta-btn">
+                            Talk to Sales
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 5 -->
+            <div class="slide" data-slide="5">
+                <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('assets/images/hero-digital-service.jpg');"></div>
+                <div class="hero-overlay-base"></div>
+                <div class="relative z-20 container mx-auto px-4 h-full flex items-center justify-start">
+                    <div class="hero-text-overlay">
+                        <h1 class="hero-heading">
+                            Do more, anytime
+                        </h1>
+                        <p class="hero-subheading">
+                            Claims, statements, policy updates on your phone
+                        </p>
+                        <a href="#" class="hero-cta-btn">
+                            Try Self-Service
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Arrows -->
+            <button class="hero-nav-btn left-4" id="prev-slide" aria-label="Previous slide">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="hero-nav-btn right-4" id="next-slide" aria-label="Next slide">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+
+            <!-- Slide Indicators -->
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30 flex gap-3">
+                <button class="slide-indicator active" data-slide="1" aria-label="Go to slide 1"></button>
+                <button class="slide-indicator" data-slide="2" aria-label="Go to slide 2"></button>
+                <button class="slide-indicator" data-slide="3" aria-label="Go to slide 3"></button>
+                <button class="slide-indicator" data-slide="4" aria-label="Go to slide 4"></button>
+                <button class="slide-indicator" data-slide="5" aria-label="Go to slide 5"></button>
+            </div>
+        </section>
+
+        <!-- Value Highlights -->
+        <section class="py-20 bg-brand-beige">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-heading font-bold text-brand-maroon mb-4">
+                        Why Choose Impact Insurance?
+                    </h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                        We're committed to providing reliable, accessible insurance solutions that protect what matters most to you.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="bg-brand-maroon text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-dollar-sign text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-heading font-semibold text-brand-dark mb-2">Affordable Premiums</h3>
+                        <p class="text-gray-600">Competitive rates designed to fit your budget without compromising coverage.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-brand-maroon text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-clock text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-heading font-semibold text-brand-dark mb-2">Quick Claims</h3>
+                        <p class="text-gray-600">Fast, efficient claims processing when you need it most.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-brand-maroon text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-globe text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-heading font-semibold text-brand-dark mb-2">Nationwide Reach</h3>
+                        <p class="text-gray-600">Comprehensive coverage across Africa with local expertise.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-brand-maroon text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-shield-alt text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-heading font-semibold text-brand-dark mb-2">Secure & Compliant</h3>
+                        <p class="text-gray-600">Your data and policies are protected with industry-leading security.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Teaser -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-heading font-bold text-brand-maroon mb-6">
+                            About Impact Insurance
+                        </h2>
+                        <p class="text-lg text-gray-700 mb-6">
+                            For over two decades, Impact Insurance has been Africa's trusted partner in financial protection.
+                            We understand the unique challenges and opportunities across the continent, providing tailored
+                            insurance solutions that protect families, businesses, and communities.
+                        </p>
+                        <p class="text-lg text-gray-700 mb-8">
+                            Our commitment to innovation, accessibility, and excellence has made us a leader in life
+                            insurance, micro-insurance, and investment products. We believe everyone deserves peace of mind.
+                        </p>
+                        <a href="about.html" class="inline-block bg-brand-maroon text-white px-8 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-colors">
+                            Read Our Story
+                        </a>
+                    </div>
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1522204523234-8729aa6e3d5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Impact Insurance Team" class="rounded-lg shadow-xl w-full h-96 object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Teaser -->
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-heading font-bold text-brand-maroon mb-4">
+                        Our Products
+                    </h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                        Comprehensive insurance solutions designed to meet your unique needs and protect your future.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-white border border-gray-200 rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
+                        <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-heart text-2xl text-red-600"></i>
+                        </div>
+                        <h3 class="text-xl font-heading font-semibold text-brand-maroon mb-3">Life Insurance</h3>
+                        <p class="text-gray-600 mb-4">Comprehensive life coverage for individuals and families with flexible payment options.</p>
+                        <a href="products/life.html" class="text-brand-maroon font-semibold hover:underline">Explore Products</a>
+                    </div>
+                    <div class="bg-white border border-gray-200 rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
+                        <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-store text-2xl text-blue-600"></i>
+                        </div>
+                        <h3 class="text-xl font-heading font-semibold text-brand-maroon mb-3">Micro-Insurance</h3>
+                        <p class="text-gray-600 mb-4">Affordable protection for small businesses and entrepreneurs across Africa.</p>
+                        <a href="products/micro.html" class="text-brand-maroon font-semibold hover:underline">Explore Products</a>
+                    </div>
+                    <div class="bg-white border border-gray-200 rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
+                        <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-piggy-bank text-2xl text-green-600"></i>
+                        </div>
+                        <h3 class="text-xl font-heading font-semibold text-brand-maroon mb-3">Savings & Investment</h3>
+                        <p class="text-gray-600 mb-4">Build wealth and secure your future with our investment-linked insurance products.</p>
+                        <a href="products/savings.html" class="text-brand-maroon font-semibold hover:underline">Explore Products</a>
+                    </div>
+                    <div class="bg-white border border-gray-200 rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
+                        <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-users text-2xl text-purple-600"></i>
+                        </div>
+                        <h3 class="text-xl font-heading font-semibold text-brand-maroon mb-3">Group Insurance</h3>
+                        <p class="text-gray-600 mb-4">Tailored group life and credit life solutions for businesses and organizations.</p>
+                        <a href="products/group.html" class="text-brand-maroon font-semibold hover:underline">Explore Products</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-heading font-bold text-brand-maroon mb-4">
+                        What Our Customers Say
+                    </h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                        Don't just take our word for it - hear from the families and businesses we've helped protect.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-gray-50 rounded-lg p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 mb-4 italic">
+                            "Impact Insurance made getting life coverage so simple. Their team was incredibly helpful,
+                            and the claims process was faster than I expected."
+                        </p>
+                        <div class="font-semibold text-brand-dark">Sarah Johnson</div>
+                        <div class="text-gray-600 text-sm">Nairobi, Kenya</div>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 mb-4 italic">
+                            "As a small business owner, finding affordable insurance was a challenge until I found Impact.
+                            Their micro-insurance products fit perfectly with my budget."
+                        </p>
+                        <div class="font-semibold text-brand-dark">Michael Okafor</div>
+                        <div class="text-gray-600 text-sm">Lagos, Nigeria</div>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 mb-4 italic">
+                            "The group insurance package has been a game-changer for our company. Our employees feel
+                            secure, and the administration is seamless."
+                        </p>
+                        <div class="font-semibold text-brand-dark">Grace Ndlovu</div>
+                        <div class="text-gray-600 text-sm">Harare, Zimbabwe</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Preview -->
+        <section class="py-20 bg-brand-beige">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-heading font-bold text-brand-maroon mb-4">
+                        Latest from Our Blog
+                    </h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                        Stay informed with the latest insurance tips, industry news, and financial planning advice.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 mb-12">
+                    <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                        <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Insurance Planning" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-heading font-semibold text-brand-dark mb-3">
+                                <a href="blog/insurance-planning.html" class="hover:text-brand-maroon">The Complete Guide to Life Insurance Planning</a>
+                            </h3>
+                            <p class="text-gray-600 mb-4">Learn how to choose the right life insurance policy for your family's financial security and peace of mind.</p>
+                            <a href="blog/insurance-planning.html" class="text-brand-maroon font-semibold hover:underline">Read More</a>
+                        </div>
+                    </article>
+                    <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2426&q=80" alt="Investment Strategies" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-heading font-semibold text-brand-dark mb-3">
+                                <a href="blog/investment-strategies.html" class="hover:text-brand-maroon">Investment-Linked Insurance: Growing Your Wealth</a>
+                            </h3>
+                            <p class="text-gray-600 mb-4">Discover how investment-linked insurance can help you build long-term wealth while protecting your family.</p>
+                            <a href="blog/investment-strategies.html" class="text-brand-maroon font-semibold hover:underline">Read More</a>
+                        </div>
+                    </article>
+                    <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Business Insurance" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-heading font-semibold text-brand-dark mb-3">
+                                <a href="blog/business-insurance.html" class="hover:text-brand-maroon">Protecting Your Business: Essential Coverage Guide</a>
+                            </h3>
+                            <p class="text-gray-600 mb-4">A comprehensive guide to business insurance options that protect your company's assets and future.</p>
+                            <a href="blog/business-insurance.html" class="text-brand-maroon font-semibold hover:underline">Read More</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="text-center">
+                    <a href="blog.html" class="inline-block bg-brand-maroon text-white px-8 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-colors">
+                        View All Articles
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <img src="assets/images/logo.png" alt="Impact Insurance Logo" class="h-12 w-auto mb-4" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjQwIiB2aWV3Qm94PSIwIDAgMTIwIDQwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cmVjdCB3aWR0aD0iMTIwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjOEIxNTM4Ii8+Cjx0ZXh0IHg9IjYwIiB5PSIyNSIgZm9udC1mYW1pbHk9Ik1vbnRzZXJyYXQiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtd2VpZ2h0PSI2MDAiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5JTVBBQ1QgSU5TVVJBTkNFPC90ZXh0Pgo8L3N2Zz4K'">
+                    <p class="text-gray-300 mb-4">
+                        Africa's trusted partner in financial protection. Providing comprehensive insurance solutions
+                        for families, businesses, and communities across the continent.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-heading font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-300 hover:text-white">About Us</a></li>
+                        <li><a href="products.html" class="text-gray-300 hover:text-white">Products</a></li>
+                        <li><a href="customers.html" class="text-gray-300 hover:text-white">Customer Portal</a></li>
+                        <li><a href="careers.html" class="text-gray-300 hover:text-white">Careers</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-heading font-semibold mb-4">Products</h3>
+                    <ul class="space-y-2">
+                        <li><a href="products/life.html" class="text-gray-300 hover:text-white">Life Insurance</a></li>
+                        <li><a href="products/micro.html" class="text-gray-300 hover:text-white">Micro-Insurance</a></li>
+                        <li><a href="products/savings.html" class="text-gray-300 hover:text-white">Savings & Investment</a></li>
+                        <li><a href="products/group.html" class="text-gray-300 hover:text-white">Group Insurance</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-heading font-semibold mb-4">Contact Info</h3>
+                    <div class="space-y-2 text-gray-300">
+                        <p><i class="fas fa-map-marker-alt mr-2"></i>Nairobi, Kenya</p>
+                        <p><i class="fas fa-phone mr-2"></i>+254 700 123 456</p>
+                        <p><i class="fas fa-envelope mr-2"></i>info@impactinsurance.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">
+                    &copy; 2024 Impact Insurance. All rights reserved.
+                </p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Enhanced Hero Slider Functionality
+        class HeroSlider {
+            constructor() {
+                this.currentSlide = 0;
+                this.totalSlides = 5;
+                this.slides = document.querySelectorAll('.slide');
+                this.indicators = document.querySelectorAll('.slide-indicator');
+                this.prevBtn = document.getElementById('prev-slide');
+                this.nextBtn = document.getElementById('next-slide');
+                this.isAutoPlaying = true;
+                this.autoPlayInterval = null;
+
+                this.init();
+            }
+
+            init() {
+                this.setupEventListeners();
+                this.startAutoPlay();
+                this.showSlide(0);
+            }
+
+            setupEventListeners() {
+                // Navigation arrows
+                if (this.prevBtn) {
+                    this.prevBtn.addEventListener('click', () => this.previousSlide());
+                }
+                if (this.nextBtn) {
+                    this.nextBtn.addEventListener('click', () => this.nextSlide());
+                }
+
+                // Slide indicators
+                this.indicators.forEach((indicator, index) => {
+                    indicator.addEventListener('click', () => this.goToSlide(index));
+                });
+
+                // Pause auto-play on hover
+                const heroSection = document.getElementById('hero');
+                if (heroSection) {
+                    heroSection.addEventListener('mouseenter', () => this.pauseAutoPlay());
+                    heroSection.addEventListener('mouseleave', () => this.resumeAutoPlay());
+                }
+            }
+
+            showSlide(index) {
+                // Remove active class from all slides and indicators
+                this.slides.forEach(slide => slide.classList.remove('active'));
+                this.indicators.forEach(indicator => indicator.classList.remove('active'));
+
+                // Add active class to current slide and indicator
+                if (this.slides[index]) {
+                    this.slides[index].classList.add('active');
+                }
+                if (this.indicators[index]) {
+                    this.indicators[index].classList.add('active');
+                }
+
+                this.currentSlide = index;
+            }
+
+            nextSlide() {
+                const nextIndex = (this.currentSlide + 1) % this.totalSlides;
+                this.goToSlide(nextIndex);
+            }
+
+            previousSlide() {
+                const prevIndex = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
+                this.goToSlide(prevIndex);
+            }
+
+            goToSlide(index) {
+                this.showSlide(index);
+                this.resetAutoPlay();
+            }
+
+            startAutoPlay() {
+                this.autoPlayInterval = setInterval(() => {
+                    if (this.isAutoPlaying) {
+                        this.nextSlide();
+                    }
+                }, 5000);
+            }
+
+            pauseAutoPlay() {
+                this.isAutoPlaying = false;
+            }
+
+            resumeAutoPlay() {
+                this.isAutoPlaying = true;
+                this.resetAutoPlay();
+            }
+
+            resetAutoPlay() {
+                if (this.autoPlayInterval) {
+                    clearInterval(this.autoPlayInterval);
+                }
+                setTimeout(() => this.startAutoPlay(), 3000);
+            }
+        }
+
+        // Initialize hero slider when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            new HeroSlider();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Impact Insurance | Get in Touch with Our Team</title>
+    <meta
+      name="description"
+      content="Contact Impact Insurance for quotes, claims support, or general inquiries. Multiple offices across Africa with 24/7 support available."
+    />
+    <meta
+      name="keywords"
+      content="contact impact insurance, customer service, claims support, insurance quotes, africa offices"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "brand-maroon": "#8B1538",
+              "brand-beige": "#F5F5DC",
+              "brand-dark": "#2C1810",
+            },
+            fontFamily: {
+              heading: ["Montserrat", "sans-serif"],
+              body: ["Lato", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Lato:wght=400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Impact Insurance",
+        "url": "https://impactlifeinsurance.com",
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "0596922343",
+            "contactType": "customer service",
+            "areaServed": "Accra",
+            "availableLanguage": "English"
+          },
+          {
+            "@type": "ContactPoint",
+            "telephone": "0596922343",
+            "contactType": "customer service",
+            "areaServed": "Accra",
+            "availableLanguage": "English"
+          }
+        ],
+        "address": [
+          {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Insurance Avenue, Westlands",
+            "addressLocality": "Nairobi",
+            "addressCountry": "KE"
+          },
+          {
+            "@type": "PostalAddress",
+            "streetAddress": "456 Financial Street, Sandton",
+            "addressLocality": "Johannesburg",
+            "addressCountry": "ZA"
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body class="font-body text-gray-800">
+    <!-- Header -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+      <nav
+        class="container mx-auto px-4 py-4 flex items-center justify-between"
+      >
+        <div class="flex items-center">
+          <a href="index.html">
+            <img
+              src="assets/images/logo.png"
+              alt="Impact Insurance Logo"
+              class="h-12 w-auto"
+              onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjQwIiB2aWV3Qm94PSIwIDAgMTIwIDQwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cmVjdCB3aWR0aD0iMTIwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjOEIxNTM4Ii8+Cjx0ZXh0IHg9IjYwIiB5PSIyNSIgZm9udC1mYW1pbHk9Ik1vbnRzZXJyYXQiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtd2VpZ2h0PSI2MDAiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5JTVBBQ1QgSU5TVVJBTkNFPC90ZXh0Pgo8L3N2Zz4K'"
+            />
+          </a>
+        </div>
+        <div class="hidden md:flex items-center space-x-8">
+          <a
+            href="index.html"
+            class="text-gray-700 hover:text-brand-maroon font-medium"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="text-gray-700 hover:text-brand-maroon font-medium"
+            >About</a
+          >
+          <a
+            href="products.html"
+            class="text-gray-700 hover:text-brand-maroon font-medium"
+            >Products</a
+          >
+          <a
+            href="customers.html"
+            class="text-gray-700 hover:text-brand-maroon font-medium"
+            >Customers</a
+          >
+          <a
+            href="careers.html"
+            class="text-gray-700 hover:text-brand-maroon font-medium"
+            >Careers</a
+          >
+          <a
+            href="blog.html"
+            class="text-gray-700 hover:text-brand-maroon font-medium"
+            >Blog</a
+          >
+          <a href="contact.html" class="text-brand-maroon font-medium"
+            >Contact</a
+          >
+        </div>
+        <div class="flex items-center space-x-4">
+          <a
+            href="#"
+            class="bg-brand-maroon text-white px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors"
+            >Get a Quote</a
+          >
+          <button class="md:hidden text-gray-700" id="mobile-menu-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+      <!-- Mobile Menu -->
+      <div
+        class="md:hidden bg-white border-t border-gray-200 hidden"
+        id="mobile-menu"
+      >
+        <div class="px-4 py-2 space-y-2">
+          <a
+            href="index.html"
+            class="block text-gray-700 hover:text-brand-maroon font-medium py-2"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="block text-gray-700 hover:text-brand-maroon font-medium py-2"
+            >About</a
+          >
+          <a
+            href="products.html"
+            class="block text-gray-700 hover:text-brand-maroon font-medium py-2"
+            >Products</a
+          >
+          <a
+            href="customers.html"
+            class="block text-gray-700 hover:text-brand-maroon font-medium py-2"
+            >Customers</a
+          >
+          <a
+            href="careers.html"
+            class="block text-gray-700 hover:text-brand-maroon font-medium py-2"
+            >Careers</a
+          >
+          <a
+            href="blog.html"
+            class="block text-gray-700 hover:text-brand-maroon font-medium py-2"
+            >Blog</a
+          >
+          <a
+            href="contact.html"
+            class="block text-brand-maroon font-medium py-2"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section
+        class="relative py-32 bg-gradient-to-r from-brand-maroon to-red-700 text-white"
+      >
+        <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+        <div class="relative container mx-auto px-4 text-center">
+          <h1 class="text-4xl md:text-6xl font-heading font-bold mb-6">
+            Contact Us
+          </h1>
+          <p class="text-xl md:text-2xl max-w-3xl mx-auto">
+            We're here to help. Get in touch with our team for support, quotes,
+            or general inquiries.
+          </p>
+        </div>
+      </section>
+
+      <!-- Contact Form & Info -->
+      <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+          <div class="grid lg:grid-cols-2 gap-12">
+            <!-- Contact Form -->
+            <div>
+              <h2
+                class="text-3xl md:text-4xl font-heading font-bold text-brand-maroon mb-8"
+              >
+                Send Us a Message
+              </h2>
+              <form id="contactForm" class="space-y-6">
+                <div class="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label
+                      for="firstName"
+                      class="block text-sm font-medium text-gray-700 mb-2"
+                      >First Name *</label
+                    >
+                    <input
+                      type="text"
+                      id="firstName"
+                      name="firstName"
+                      required
+                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-maroon focus:border-transparent"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="lastName"
+                      class="block text-sm font-medium text-gray-700 mb-2"
+                      >Last Name *</label
+                    >
+                    <input
+                      type="text"
+                      id="lastName"
+                      name="lastName"
+                      required
+                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-maroon focus:border-transparent"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label
+                    for="email"
+                    class="block text-sm font-medium text-gray-700 mb-2"
+                    >Email Address *</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-maroon focus:border-transparent"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="phone"
+                    class="block text-sm font-medium text-gray-700 mb-2"
+                    >Phone Number *</label
+                  >
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    required
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-maroon focus:border-transparent"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="topic"
+                    class="block text-sm font-medium text-gray-700 mb-2"
+                    >Topic *</label
+                  >
+                  <select
+                    id="topic"
+                    name="topic"
+                    required
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-maroon focus:border-transparent"
+                  >
+                    <option value="">Select a topic</option>
+                    <option value="quote">Get a Quote</option>
+                    <option value="claim">File a Claim</option>
+                    <option value="support">Customer Support</option>
+                    <option value="complaint">Make a Complaint</option>
+                    <option value="partnership">Partnership Inquiry</option>
+                    <option value="media">Media Inquiry</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <div>
+                  <label
+                    for="message"
+                    class="block text-sm font-medium text-gray-700 mb-2"
+                    >Message *</label
+                  >
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="6"
+                    required
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-maroon focus:border-transparent"
+                    placeholder="Please provide details about your inquiry..."
+                  ></textarea>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-4">
+                  <button
+                    type="submit"
+                    class="bg-brand-maroon text-white px-8 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-colors"
+                  >
+                    Send Message
+                  </button>
+                  <a
+                    href="#"
+                    class="border-2 border-brand-maroon text-brand-maroon px-8 py-3 rounded-lg font-semibold hover:bg-brand-maroon hover:text-white transition-colors text-center"
+                  >
+                    Request a Call Back
+                  </a>
+                </div>
+              </form>
+
+              <!-- Success Message (hidden by default) -->
+              <div
+                id="successMessage"
+                class="hidden mt-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg"
+              >
+                <div class="flex items-center">
+                  <i class="fas fa-check-circle mr-3"></i>
+                  <div>
+                    <h3 class="font-semibold">Message Sent Successfully!</h3>
+                    <p>
+                      Thank you for contacting us. We'll get back to you within
+                      24 hours.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact Information -->
+            <div>
+              <h2
+                class="text-3xl md:text-4xl font-heading font-bold text-brand-maroon mb-8"
+              >
+                Get in Touch
+              </h2>
+
+              <!-- Office Locations -->
+              <div class="space-y-8">
+                <div>
+                  <h3
+                    class="text-xl font-heading font-semibold text-brand-maroon mb-4"
+                  >
+                    Our Offices
+                  </h3>
+
+                  <!-- Nairobi Office -->
+                  <div class="bg-gray-50 rounded-lg p-6 mb-6">
+                    <div class="flex items-start mb-4">
+                      <div
+                        class="bg-brand-maroon text-white p-3 rounded-full mr-4"
+                      >
+                        <i class="fas fa-map-marker-alt"></i>
+                      </div>
+                      <div>
+                        <h4 class="font-semibold text-brand-maroon mb-2">
+                          10 Yiyiwa Road, Accra (Headquarters)
+                        </h4>
+                        <p class="text-gray-600 mb-2">
+                          Abelemkpe,<br />Accra, Ghana
+                        </p>
+                        <p class="text-sm text-gray-500 mb-3">
+                          Mon-Fri: 8:00 AM - 5:00 PM
+                        </p>
+                        <div class="space-y-1 text-sm">
+                          <p>
+                            <i class="fas fa-phone mr-2 text-brand-maroon"></i
+                            >+233 59 692 2343
+                          </p>
+                          <p>
+                            <i
+                              class="fas fa-envelope mr-2 text-brand-maroon"
+                            ></i
+                            >info@impactlifeinsurance.com
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Map Placeholder -->
+                    <div
+                      class="bg-gray-200 h-48 rounded-lg flex items-center justify-center"
+                    >
+                      <div class="text-center text-gray-500">
+                        <i class="fas fa-map-marked-alt text-3xl mb-2"></i>
+                        <p>Interactive Map</p>
+                        <p class="text-sm">
+                          https://maps.app.goo.gl/zFEmJTNWhTsoZyyE7
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Johannesburg Office -->
+                  <div class="bg-gray-50 rounded-lg p-6 mb-6">
+                    <div class="flex items-start mb-4">
+                      <div
+                        class="bg-brand-maroon text-white p-3 rounded-full mr-4"
+                      >
+                        <i class="fas fa-map-marker-alt"></i>
+                      </div>
+                      <div>
+                        <h4 class="font-semibold text-brand-maroon mb-2">
+                          Johannesburg, South Africa
+                        </h4>
+                        <p class="text-gray-600 mb-2">
+                          456 Financial Street, Sandton<br />Johannesburg, South
+                          Africa 2196
+                        </p>
+                        <p class="text-sm text-gray-500 mb-3">
+                          Mon-Fri: 8:00 AM - 5:00 PM<br />Sat: 9:00 AM - 1:00 PM
+                        </p>
+                        <div class="space-y-1 text-sm">
+                          <p>
+                            <i class="fas fa-phone mr-2 text-brand-maroon"></i
+                            >+27 21 123 4567
+                          </p>
+                          <p>
+                            <i
+                              class="fas fa-envelope mr-2 text-brand-maroon"
+                            ></i
+                            >johannesburg@impactinsurance.com
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Map Placeholder -->
+                    <div
+                      class="bg-gray-200 h-48 rounded-lg flex items-center justify-center"
+                    >
+                      <div class="text-center text-gray-500">
+                        <i class="fas fa-map-marked-alt text-3xl mb-2"></i>
+                        <p>Interactive Map</p>
+                        <p class="text-sm">Johannesburg Office Location</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Lagos Office -->
+                  <div class="bg-gray-50 rounded-lg p-6">
+                    <div class="flex items-start mb-4">
+                      <div
+                        class="bg-brand-maroon text-white p-3 rounded-full mr-4"
+                      >
+                        <i class="fas fa-map-marker-alt"></i>
+                      </div>
+                      <div>
+                        <h4 class="font-semibold text-brand-maroon mb-2">
+                          Lagos, Nigeria
+                        </h4>
+                        <p class="text-gray-600 mb-2">
+                          789 Commerce Boulevard, Victoria Island<br />Lagos,
+                          Nigeria 101241
+                        </p>
+                        <p class="text-sm text-gray-500 mb-3">
+                          Mon-Fri: 8:00 AM - 5:00 PM<br />Sat: 9:00 AM - 2:00 PM
+                        </p>
+                        <div class="space-y-1 text-sm">
+                          <p>
+                            <i class="fas fa-phone mr-2 text-brand-maroon"></i
+                            >+234 700 123 4567
+                          </p>
+                          <p>
+                            <i
+                              class="fas fa-envelope mr-2 text-brand-maroon"
+                            ></i
+                            >lagos@impactinsurance.com
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Map Placeholder -->
+                    <div
+                      class="bg-gray-200 h-48 rounded-lg flex items-center justify-center"
+                    >
+                      <div class="text-center text-gray-500">
+                        <i class="fas fa-map-marked-alt text-3xl mb-2"></i>
+                        <p>Interactive Map</p>
+                        <p class="text-sm">Lagos Office Location</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Department Contacts -->
+      <section class="py-20 bg-brand-beige">
+        <div class="container mx-auto px-4">
+          <h2
+            class="text-3xl md:text-4xl font-heading font-bold text-brand-maroon text-center mb-16"
+          >
+            Department Contacts
+          </h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white rounded-lg p-6 text-center shadow-lg">
+              <div
+                class="bg-blue-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="fas fa-calculator text-2xl text-blue-600"></i>
+              </div>
+              <h3
+                class="text-lg font-heading font-semibold text-brand-dark mb-3"
+              >
+                Sales & Quotes
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Get personalized quotes and product information
+              </p>
+              <div class="space-y-2">
+                <p class="font-semibold text-brand-maroon">+254 700 123 400</p>
+                <p class="text-sm text-gray-600">sales@impactinsurance.com</p>
+                <p class="text-xs text-gray-500">Mon-Fri 8AM-6PM</p>
+              </div>
+            </div>
+            <div class="bg-white rounded-lg p-6 text-center shadow-lg">
+              <div
+                class="bg-red-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="fas fa-file-invoice-dollar text-2xl text-red-600"></i>
+              </div>
+              <h3
+                class="text-lg font-heading font-semibold text-brand-dark mb-3"
+              >
+                Claims Department
+              </h3>
+              <p class="text-gray-600 mb-4">
+                File and track your insurance claims
+              </p>
+              <div class="space-y-2">
+                <p class="font-semibold text-brand-maroon">+254 700 123 500</p>
+                <p class="text-sm text-gray-600">claims@impactinsurance.com</p>
+                <p class="text-xs text-gray-500">24/7 Emergency Line</p>
+              </div>
+            </div>
+            <div class="bg-white rounded-lg p-6 text-center shadow-lg">
+              <div
+                class="bg-green-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="fas fa-user-headset text-2xl text-green-600"></i>
+              </div>
+              <h3
+                class="text-lg font-heading font-semibold text-brand-dark mb-3"
+              >
+                Customer Support
+              </h3>
+              <p class="text-gray-600 mb-4">
+                General inquiries and policy support
+              </p>
+              <div class="space-y-2">
+                <p class="font-semibold text-brand-maroon">+254 700 123 456</p>
+                <p class="text-sm text-gray-600">support@impactinsurance.com</p>
+                <p class="text-xs text-gray-500">24/7 Support</p>
+              </div>
+            </div>
+            <div class="bg-white rounded-lg p-6 text-center shadow-lg">
+              <div
+                class="bg-purple-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="fas fa-users text-2xl text-purple-600"></i>
+              </div>
+              <h3
+                class="text-lg font-heading font-semibold text-brand-dark mb-3"
+              >
+                Group Insurance
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Corporate and group insurance solutions
+              </p>
+              <div class="space-y-2">
+                <p class="font-semibold text-brand-maroon">+254 700 123 600</p>
+                <p class="text-sm text-gray-600">group@impactinsurance.com</p>
+                <p class="text-xs text-gray-500">Mon-Fri 8AM-5PM</p>
+              </div>
+            </div>
+            <div class="bg-white rounded-lg p-6 text-center shadow-lg">
+              <div
+                class="bg-yellow-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="fas fa-microphone text-2xl text-yellow-600"></i>
+              </div>
+              <h3
+                class="text-lg font-heading font-semibold text-brand-dark mb-3"
+              >
+                Media & PR
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Press inquiries and media relations
+              </p>
+              <div class="space-y-2">
+                <p class="font-semibold text-brand-maroon">+254 700 123 700</p>
+                <p class="text-sm text-gray-600">media@impactinsurance.com</p>
+                <p class="text-xs text-gray-500">Mon-Fri 9AM-5PM</p>
+              </div>
+            </div>
+            <div class="bg-white rounded-lg p-6 text-center shadow-lg">
+              <div
+                class="bg-indigo-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="fas fa-handshake text-2xl text-indigo-600"></i>
+              </div>
+              <h3
+                class="text-lg font-heading font-semibold text-brand-dark mb-3"
+              >
+                Partnerships
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Business partnerships and collaborations
+              </p>
+              <div class="space-y-2">
+                <p class="font-semibold text-brand-maroon">+254 700 123 800</p>
+                <p class="text-sm text-gray-600">
+                  partnerships@impactinsurance.com
+                </p>
+                <p class="text-xs text-gray-500">Mon-Fri 8AM-5PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Emergency Contacts -->
+      <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+          <h2
+            class="text-3xl md:text-4xl font-heading font-bold text-brand-maroon text-center mb-16"
+          >
+            Emergency Contacts
+          </h2>
+          <div class="max-w-4xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-8">
+              <div class="bg-red-50 border-l-4 border-red-500 p-6">
+                <div class="flex items-center mb-4">
+                  <div class="bg-red-500 text-white p-3 rounded-full mr-4">
+                    <i class="fas fa-ambulance"></i>
+                  </div>
+                  <h3 class="text-xl font-heading font-semibold text-red-700">
+                    Emergency Claims
+                  </h3>
+                </div>
+                <p class="text-gray-700 mb-4">
+                  For urgent claims and emergency situations requiring immediate
+                  assistance.
+                </p>
+                <div class="space-y-2">
+                  <p class="font-semibold text-red-700 text-lg">
+                    +254 700 911 911
+                  </p>
+                  <p class="text-sm text-gray-600">
+                    Available 24/7 for emergency claims
+                  </p>
+                </div>
+              </div>
+              <div class="bg-blue-50 border-l-4 border-blue-500 p-6">
+                <div class="flex items-center mb-4">
+                  <div class="bg-blue-500 text-white p-3 rounded-full mr-4">
+                    <i class="fas fa-shield-alt"></i>
+                  </div>
+                  <h3 class="text-xl font-heading font-semibold text-blue-700">
+                    Fraud Hotline
+                  </h3>
+                </div>
+                <p class="text-gray-700 mb-4">
+                  Report suspected fraud or suspicious insurance activities.
+                </p>
+                <div class="space-y-2">
+                  <p class="font-semibold text-blue-700 text-lg">
+                    +254 700 123 999
+                  </p>
+                  <p class="text-sm text-gray-600">
+                    Confidential reporting line
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="py-20 bg-brand-maroon text-white">
+        <div class="container mx-auto px-4 text-center">
+          <h2 class="text-3xl md:text-4xl font-heading font-bold mb-6">
+            Need Immediate Assistance?
+          </h2>
+          <p class="text-xl mb-8 max-w-2xl mx-auto">
+            Our team is ready to help you with any insurance needs. Contact us
+            today for personalized support.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="tel:+254700123456"
+              class="inline-block bg-white text-brand-maroon px-8 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-colors"
+            >
+              Call Us Now
+            </a>
+            <a
+              href="#"
+              class="inline-block border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-brand-maroon transition-colors"
+            >
+              Start Live Chat
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white py-16">
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+          <div>
+            <img
+              src="assets/images/logo.png"
+              alt="Impact Insurance Logo"
+              class="h-12 w-auto mb-4"
+              onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjQwIiB2aWV3Qm94PSIwIDAgMTIwIDQwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cmVjdCB3aWR0aD0iMTIwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjOEIxNTM4Ii8+Cjx0ZXh0IHg9IjYwIiB5PSIyNSIgZm9udC1mYW1pbHk9Ik1vbnRzZXJyYXQiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtd2VpZ2h0PSI2MDAiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5JTVBBQ1QgSU5TVVJBTkNFPC90ZXh0Pgo8L3N2Zz4K'"
+            />
+            <p class="text-gray-300 mb-4">
+              Africa's trusted partner in financial protection. Providing
+              comprehensive insurance solutions for families, businesses, and
+              communities across the continent.
+            </p>
+            <div class="flex space-x-4">
+              <a href="#" class="text-gray-300 hover:text-white"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="text-gray-300 hover:text-white"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="text-gray-300 hover:text-white"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a href="#" class="text-gray-300 hover:text-white"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-lg font-heading font-semibold mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="about.html" class="text-gray-300 hover:text-white"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a href="products.html" class="text-gray-300 hover:text-white"
+                  >Products</a
+                >
+              </li>
+              <li>
+                <a href="customers.html" class="text-gray-300 hover:text-white"
+                  >Customer Portal</a
+                >
+              </li>
+              <li>
+                <a href="careers.html" class="text-gray-300 hover:text-white"
+                  >Careers</a
+                >
+              </li>
+              <li>
+                <a href="contact.html" class="text-gray-300 hover:text-white"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-heading font-semibold mb-4">Products</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="products/life.html"
+                  class="text-gray-300 hover:text-white"
+                  >Life Insurance</a
+                >
+              </li>
+              <li>
+                <a
+                  href="products/micro.html"
+                  class="text-gray-300 hover:text-white"
+                  >Micro-Insurance</a
+                >
+              </li>
+              <li>
+                <a
+                  href="products/savings.html"
+                  class="text-gray-300 hover:text-white"
+                  >Savings & Investment</a
+                >
+              </li>
+              <li>
+                <a
+                  href="products/group.html"
+                  class="text-gray-300 hover:text-white"
+                  >Group Insurance</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-heading font-semibold mb-4">
+              Contact Info
+            </h3>
+            <div class="space-y-2 text-gray-300">
+              <p><i class="fas fa-map-marker-alt mr-2"></i>Nairobi, Kenya</p>
+              <p><i class="fas fa-phone mr-2"></i>+254 700 123 456</p>
+              <p>
+                <i class="fas fa-envelope mr-2"></i>info@impactinsurance.com
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-gray-400 text-sm">
+            &copy; 2024 Impact Insurance. All rights reserved.
+          </p>
+          <div class="flex space-x-6 mt-4 md:mt-0">
+            <a href="#" class="text-gray-400 hover:text-white text-sm"
+              >Privacy Policy</a
+            >
+            <a href="#" class="text-gray-400 hover:text-white text-sm"
+              >Terms of Service</a
+            >
+            <a href="#" class="text-gray-400 hover:text-white text-sm"
+              >Cookie Policy</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      document
+        .getElementById("mobile-menu-toggle")
+        .addEventListener("click", function () {
+          document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+
+      // Contact form submission
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          // Show success message
+          document.getElementById("successMessage").classList.remove("hidden");
+
+          // Reset form
+          this.reset();
+
+          // Scroll to success message
+          document
+            .getElementById("successMessage")
+            .scrollIntoView({ behavior: "smooth" });
+
+          // Hide success message after 5 seconds
+          setTimeout(function () {
+            document.getElementById("successMessage").classList.add("hidden");
+          }, 5000);
+        });
+    </script>
+  </body>
+</html>

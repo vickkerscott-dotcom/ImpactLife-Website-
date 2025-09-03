@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Portal - Impact Insurance | Claims, Policies & Self-Service</title>
+    <meta name="description" content="Access your Impact Insurance policies, file claims, update information, and manage your coverage online. Fast, secure, and convenient self-service options.">
+    <meta name="keywords" content="customer portal, file claim, insurance claims, policy update, beneficiary change, self-service insurance">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-maroon': '#8B1538',
+                        'brand-beige': '#F5F5DC',
+                        'brand-dark': '#2C1810'
+                    },
+                    fontFamily: {
+                        'heading': ['Montserrat', 'sans-serif'],
+                        'body': ['Lato', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Lato:wght=400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="font-body text-gray-800">
+    <!-- Header -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center">
+                <a href="index.html">
+                    <img src="assets/images/logo.png" alt="Impact Insurance Logo" class="h-12 w-auto" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjQwIiB2aWV3Qm94PSIwIDAgMTIwIDQwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cmVjdCB3aWR0aD0iMTIwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjOEIxNTM4Ii8+Cjx0ZXh0IHg9IjYwIiB5PSIyNSIgZm9udC1mYW1pbHk9Ik1vbnRzZXJyYXQiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtd2VpZ2h0PSI2MDAiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5JTVBBQ1QgSU5TVVJBTkNFPC90ZXh0Pgo8L3N2Zz4K'">
+                </a>
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-gray-700 hover:text-brand-maroon font-medium">Home</a>
+                <a href="about.html" class="text-gray-700 hover:text-brand-maroon font-medium">About</a>
+                <a href="products.html" class="text-gray-700 hover:text-brand-maroon font-medium">Products</a>
+                <a href="customers.html" class="text-brand-maroon font-medium">Customers</a>
+                <a href="careers.html" class="text-gray-700 hover:text-brand-maroon font-medium">Careers</a>
+                <a href="blog.html" class="text-gray-700 hover:text-brand-maroon font-medium">Blog</a>
+                <a href="contact.html" class="text-gray-700 hover:text-brand-maroon font-medium">Contact</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="#" class="bg-brand-maroon text-white px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors">Get a Quote</a>
+                <button class="md:hidden text-gray-700" id="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div class="md:hidden bg-white border-t border-gray-200 hidden" id="mobile-menu">
+            <div class="px-4 py-2 space-y-2">
+                <a href="index.html" class="block text-gray-700 hover:text-brand-maroon font-medium py-2">Home</a>
+                <a href="about.html" class="block text-gray-700 hover:text-brand-maroon font-medium py-2">About</a>
+                <a href="products.html" class="block text-gray-700 hover:text-brand-maroon font-medium py-2">Products</a>
+                <a href="customers.html" class="block text-brand-maroon font-medium py-2">Customers</a>
+                <a href="careers.html" class="block text-gray-700 hover:text-brand-maroon font-medium py-2">Careers</a>
+                <a href="blog.html" class="block text-gray-700 hover:text-brand-maroon font-medium py-2">Blog</a>
+                <a href="contact.html" class="block text-gray-700 hover:text-brand-maroon font-medium py-2">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative py-32 bg-gradient-to-r from-brand-maroon to-red-700 text-white">
+            <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+            <div class="relative container mx-auto px-4 text-center">
+                <h1 class="text-4xl md:text-6xl font-heading font-bold mb-6">
+                    Customer Portal
+                </h1>
+                <p class="text-xl md:text-2xl max-w-3xl mx-auto">
+                    Manage your policies, file claims, and access all your insurance services in one convenient location
+                </p>
+            </div>
+        </section>
+
+        <!-- Quick Actions -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-brand-maroon text-center mb-16">
+                    Quick Actions
+                </h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-white text-gray-800 border border-gray-200 rounded-lg p-6 text-center shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                        <div class="bg-red-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-file-invoice-dollar text-2xl text-red-600"></i>
+                        </div>
+                        <h3 class="text-lg font-heading font-semibold text-brand-maroon mb-3">File a Claim</h3>
+                        <p class="text-gray-600 mb-4">Report a claim quickly and easily with our online system.</p>
+                        <a href="#" class="inline-block bg-red-700 text-white px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors">
+                            Start Claim
+                        </a>
+                    </div>
+                    <div class="bg-white text-gray-800 border border-gray-200 rounded-lg p-6 text-center shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                        <div class="bg-blue-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-user-edit text-2xl text-blue-600"></i>
+                        </div>
+                        <h3 class="text-lg font-heading font-semibold text-brand-maroon mb-3">Update Policy</h3>
+                        <p class="text-gray-600 mb-4">Change beneficiaries, update contact details, or modify coverage.</p>
+                        <a href="#" class="inline-block bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors">
+                            Update Now
+                        </a>
+                    </div>
+                    <div class="bg-white text-gray-800 border border-gray-200 rounded-lg p-6 text-center shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                        <div class="bg-green-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-download text-2xl text-green-600"></i>
+                        </div>
+                        <h3 class="text-lg font-heading font-semibold text-brand-maroon mb-3">Download Forms</h3>
+                        <p class="text-gray-600 mb-4">Access claim forms, policy documents, and other important paperwork.</p>
+                        <a href="#forms" class="inline-block bg-green-700 text-white px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors">
+                            Get Forms
+                        </a>
+                    </div>
+                    <div class="bg-white text-gray-800 border border-gray-200 rounded-lg p-6 text-center shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                        <div class="bg-purple-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-mobile-alt text-2xl text-purple-600"></i>
+                        </div>
+                        <h3 class="text-lg font-heading font-semibold text-brand-maroon mb-3">Mobile App</h3>
+                        <p class="text-gray-600 mb-4">Download our app for 24/7 access to your insurance services.</p>
+                        <a href="#" class="inline-block bg-purple-700 text-white px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors">
+                            Download App
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Claims Process -->
+        <section class="py-20 bg-brand-beige">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-brand-dark text-center mb-16">
+                    Claims Process
+                </h2>
+                <div class="max-w-4xl mx-auto">
+                    <div class="grid md:grid-cols-2 gap-12 items-center mb-12">
+                        <div>
+                            <h3 class="text-2xl font-heading font-semibold text-brand-dark mb-6">How to File a Claim</h3>
+                            <p class="text-gray-700 mb-6">
+                                Filing a claim with Impact Insurance is simple and straightforward. We process most claims
+                                within 48 hours and keep you updated throughout the entire process.
+                            </p>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <div class="bg-brand-maroon text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-4 mt-1">1</div>
+                                    <div>
+                                        <h4 class="font-semibold text-brand-dark">Report the Incident</h4>
+                                        <p class="text-gray-600 text-sm">Call us or use our online portal to report your claim within 30 days.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="bg-brand-maroon text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-4 mt-1">2</div>
+                                    <div>
+                                        <h4 class="font-semibold text-brand-dark">Submit Documentation</h4>
+                                        <p class="text-gray-600 text-sm">Upload required documents like police reports, medical certificates, or receipts.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="bg-brand-maroon text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-4 mt-1">3</div>
+                                    <div>
+                                        <h4 class="font-semibold text-brand-dark">Claim Assessment</h4>
+                                        <p class="text-gray-600 text-sm">Our team reviews your claim and may contact you for additional information.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="bg-brand-maroon text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-4 mt-1">4</div>
+                                    <div>
+                                        <h4 class="font-semibold text-brand-dark">Payment Processing</h4>
+                                        <p class="text-gray-600 text-sm">Once approved, payment is processed within 7-14 days via your preferred method.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg p-8 shadow-xl">
+                            <h3 class="text-xl font-heading font-semibold text-brand-dark mb-6">Claim Types We Handle</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                                    <span class="font-medium">Life Insurance Claims</span>
+                                    <span class="text-green-600 font-semibold">24-48 hours</span>
+                                </div>
+                                <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                                    <span class="font-medium">Medical Claims</span>
+                                    <span class="text-green-600 font-semibold">48-72 hours</span>
+                                </div>
+                                <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                                    <span class="font-medium">Property Damage</span>
+                                    <span class="text-green-600 font-semibold">3-5 days</span>
+                                </div>
+                                <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                                    <span class="font-medium">Business Interruption</span>
+                                    <span class="text-green-600 font-semibold">5-7 days</span>
+                                </div>
+                                <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                                    <span class="font-medium">Critical Illness</span>
+                                    <span class="text-green-600 font-semibold">24-48 hours</span>
+                                </div>
+                            </div>
+                            <div class="mt-6 text-center">
+                                <a href="#" class="inline-block bg-brand-maroon text-white px-8 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-colors">
+                                    Start a Claim
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Policy Management -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-brand-maroon text-center mb-16">
+                    Policy Management
+                </h2>
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div>
+                        <h3 class="text-2xl font-heading font-semibold text-brand-maroon mb-6">Update Your Information</h3>
+                        <p class="text-gray-700 mb-8">
+                            Keep your policy information current to ensure smooth claims processing and communication.
+                        </p>
+                        <div class="space-y-6">
+                            <div class="bg-gray-50 rounded-lg p-6">
+                                <h4 class="text-lg font-heading font-semibold text-brand-dark mb-3">Beneficiary Changes</h4>
+                                <p class="text-gray-600 mb-4">Update beneficiary information for life insurance policies.</p>
+                                <a href="#" class="text-brand-maroon font-semibold hover:underline">Update Beneficiaries</a>
+                            </div>
+                            <div class="bg-gray-50 rounded-lg p-6">
+                                <h4 class="text-lg font-heading font-semibold text-brand-dark mb-3">Contact Details</h4>
+                                <p class="text-gray-600 mb-4">Change your phone number, email address, or mailing address.</p>
+                                <a href="#" class="text-brand-maroon font-semibold hover:underline">Update Contact Info</a>
+                            </div>
+                            <div class="bg-gray-50 rounded-lg p-6">
+                                <h4 class="text-lg font-heading font-semibold text-brand-dark mb-3">Payment Method</h4>
+                                <p class="text-gray-600 mb-4">Update your premium payment method or banking details.</p>
+                                <a href="#" class="text-brand-maroon font-semibold hover:underline">Change Payment Method</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-heading font-semibold text-brand-maroon mb-6">Coverage Modifications</h3>
+                        <p class="text-gray-700 mb-8">
+                            Adjust your coverage to match your changing needs and circumstances.
+                        </p>
+                        <div class="space-y-6">
+                            <div class="bg-gray-50 rounded-lg p-6">
+                                <h4 class="text-lg font-heading font-semibold text-brand-dark mb-3">Increase Coverage</h4>
+                                <p class="text-gray-600 mb-4">Boost your sum assured during policy renewal or life events.</p>
+                                <a href="#" class="text-brand-maroon font-semibold hover:underline">Request Increase</a>
+                            </div>
+                            <div class="bg-gray-50 rounded-lg p-6">
+                                <h4 class="text-lg font-heading font-semibold text-brand-dark mb-3">Add Riders</h4>
+                                <p class="text-gray-600 mb-4">Add optional benefits like critical illness or disability coverage.</p>
+                                <a href="#" class="text-brand-maroon font-semibold hover:underline">View Available Riders</a>
+                            </div>
+                            <div class="bg-gray-50 rounded-lg p-6">
+                                <h4 class="text-lg font-heading font-semibold text-brand-dark mb-3">Policy Loans</h4>
+                                <p class="text-gray-600 mb-4">Access funds from your investment-linked policy when needed.</p>
+                                <a href="#" class="text-brand-maroon font-semibold hover:underline">Apply for Loan</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Downloadable Forms -->
+        <section id="forms" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-brand-dark text-center mb-16">
+                    Downloadable Forms
+                </h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <div class="bg-red-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                            <i class="fas fa-file-invoice-dollar text-2xl text-red-600"></i>
+                        </div>
+                        <h3 class="text-lg font-heading font-semibold text-brand-dark mb-3">Claim Forms</h3>
+                        <ul class="space-y-2 text-gray-600 mb-4">
+                            <li><a href="#" class="hover:text-brand-maroon">Life Insurance Claim Form</a></li>
+                            <li><a href="#" class="hover:text-brand-maroon">Medical Claim Form</a></li>
+                            <li><a href="#" class="hover:text-brand-maroon">Property Damage Claim Form</a></li>
+                            <li><a href="#" class="hover:text-brand-maroon">Critical Illness Claim Form</a></li>
+                        </ul>
+                        <a href="#" class="text-brand-maroon font-semibold hover:underline">Download All Claim Forms</a>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <div class="bg-blue-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                            <i class="fas fa-user-edit text-2xl text-blue-600"></i>
+                        </div>
+                        <h3 class="text-lg font-heading font-semibold text-brand-dark mb-3">Policy Change Forms</h3>
+                        <ul class="space-y-2 text-gray-600 mb-4">
+                            <li><a href="#" class="hover:text-brand-maroon">Beneficiary Change Form</a></li>
+                            <li><a href="#" class="hover:text-brand-maroon">Address Change Form</a></li>
+                            <li><a href="#" class="hover:text-brand-maroon">Payment Method Change Form</a></li>
+                            <li><a href="#" class="hover:text-brand-maroon">Coverage Modification Form</a></li>
+                        </ul>
+                        <a href="#" class="text-brand-maroon font-semibold hover:underline">Download All Change Forms</a>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <div class="bg-green-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                            <i class="fas fa-file-contract text-2xl text-green-600"></i>
+                        </div>
+                        <h3 class="text-lg font-heading font-semibold text-brand-dark mb-3">Other Documents</h3>
+                        <ul class="space-y-2 text-gray-600 mb-4">
+                            <li><a href="#" class="hover:text-brand-maroon">Policy Loan Application</a></li>
+                            <li><a href="#" class="hover:text-brand-maroon">Surrender Request Form</a></li>
+                            <li><a href="#" class="hover:text-brand-maroon">Nomination Form</a></li>
+                            <li><a href="#" class="hover:text-brand-maroon">Power of Attorney Form</a></li>
+                        </ul>
+                        <a href="#" class="text-brand-maroon font-semibold hover:underline">Download All Documents</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Customer Support -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-brand-maroon text-center mb-16">
+                    Need Help?
+                </h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="bg-brand-maroon text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-phone text-2xl"></i>
+                        </div>
+                        <h3 class="text-lg font-heading font-semibold text-brand-maroon mb-3">Call Us</h3>
+                        <p class="text-gray-600 mb-4">Speak directly with our customer service team.</p>
+                        <p class="font-semibold text-brand-maroon">+254 700 123 456</p>
+                        <p class="text-sm text-gray-500">Mon-Fri 8AM-6PM</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-brand-maroon text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-envelope text-2xl"></i>
+                        </div>
+                        <h3 class="text-lg font-heading font-semibold text-brand-maroon mb-3">Email Us</h3>
+                        <p class="text-gray-600 mb-4">Send us your questions and we'll respond within 24 hours.</p>
+                        <p class="font-semibold text-brand-maroon">support@impactinsurance.com</p>
+                        <p class="text-sm text-gray-500">24/7 email support</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-brand-maroon text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-comments text-2xl"></i>
+                        </div>
+                        <h3 class="text-lg font-heading font-semibold text-brand-maroon mb-3">Live Chat</h3>
+                        <p class="text-gray-600 mb-4">Chat with our support team in real-time.</p>
+                        <a href="#" class="inline-block bg-brand-maroon text-white px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors">
+                            Start Chat
+                        </a>
+                        <p class="text-sm text-gray-500 mt-2">Available 24/7</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQs Accordion -->
+        <section class="py-20 bg-brand-beige">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-brand-dark text-center mb-16">
+                    Frequently Asked Questions
+                </h2>
+                <div class="max-w-3xl mx-auto">
+                    <div class="space-y-4">
+                        <div class="bg-white rounded-lg shadow-sm">
+                            <button class="faq-toggle w-full text-left p-6 focus:outline-none focus:ring-2 focus:ring-brand-maroon" data-target="faq1">
+                                <div class="flex justify-between items-center">
+                                    <h3 class="text-lg font-heading font-semibold text-brand-dark">How do I check my claim status?</h3>
+                                    <i class="fas fa-chevron-down text-brand-maroon transform transition-transform"></i>
+                                </div>
+                            </button>
+                            <div id="faq1" class="faq-content hidden px-6 pb-6">
+                                <p class="text-gray-600">You can check your claim status by logging into your customer portal, calling our helpline at +254 700 123 456, or using our mobile app. You'll receive regular updates via SMS and email throughout the process.</p>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-sm">
+                            <button class="faq-toggle w-full text-left p-6 focus:outline-none focus:ring-2 focus:ring-brand-maroon" data-target="faq2">
+                                <div class="flex justify-between items-center">
+                                    <h3 class="text-lg font-heading font-semibold text-brand-dark">What documents do I need to file a claim?</h3>
+                                    <i class="fas fa-chevron-down text-brand-maroon transform transition-transform"></i>
+                                </div>
+                            </button>
+                            <div id="faq2" class="faq-content hidden px-6 pb-6">
+                                <p class="text-gray-600">Required documents vary by claim type, but generally include your policy number, ID, incident report, medical certificates (for health claims), repair estimates (for property damage), and bank details for payment.</p>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-sm">
+                            <button class="faq-toggle w-full text-left p-6 focus:outline-none focus:ring-2 focus:ring-brand-maroon" data-target="faq3">
+                                <div class="flex justify-between items-center">
+                                    <h3 class="text-lg font-heading font-semibold text-brand-dark">How long does it take to process a claim?</h3>
+                                    <i class="fas fa-chevron-down text-brand-maroon transform transition-transform"></i>
+                                </div>
+                            </button>
+                            <div id="faq3" class="faq-content hidden px-6 pb-6">
+                                <p class="text-gray-600">Most claims are processed within 48 hours of receiving complete documentation. Life insurance and critical illness claims are typically settled within 7-14 days, while property claims may take 2-4 weeks depending on complexity.</p>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-sm">
+                            <button class="faq-toggle w-full text-left p-6 focus:outline-none focus:ring-2 focus:ring-brand-maroon" data-target="faq4">
+                                <div class="flex justify-between items-center">
+                                    <h3 class="text-lg font-heading font-semibold text-brand-dark">Can I change my beneficiary after taking the policy?</h3>
+                                    <i class="fas fa-chevron-down text-brand-maroon transform transition-transform"></i>
+                                </div>
+                            </button>
+                            <div id="faq4" class="faq-content hidden px-6 pb-6">
+                                <p class="text-gray-600">Yes, you can change your beneficiary at any time by submitting a beneficiary change form. The change takes effect immediately upon our approval. This can be done online through your customer portal or by visiting any of our branches.</p>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-sm">
+                            <button class="faq-toggle w-full text-left p-6 focus:outline-none focus:ring-2 focus:ring-brand-maroon" data-target="faq5">
+                                <div class="flex justify-between items-center">
+                                    <h3 class="text-lg font-heading font-semibold text-brand-dark">What if I forget my policy number?</h3>
+                                    <i class="fas fa-chevron-down text-brand-maroon transform transition-transform"></i>
+                                </div>
+                            </button>
+                            <div id="faq5" class="faq-content hidden px-6 pb-6">
+                                <p class="text-gray-600">You can retrieve your policy number using your ID number or phone number through our customer portal, mobile app, or by calling our helpline. We can also send it to you via SMS or email for security verification.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 bg-brand-maroon text-white">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold mb-6">
+                    Ready to Get Started?
+                </h2>
+                <p class="text-xl mb-8 max-w-2xl mx-auto">
+                    Access your customer portal or contact us for personalized assistance with your insurance needs.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#" class="inline-block bg-white text-brand-maroon px-8 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-colors">
+                        Start a Claim
+                    </a>
+                    <a href="#" class="inline-block border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-brand-maroon transition-colors">
+                        Update My Policy
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <img src="assets/images/logo.png" alt="Impact Insurance Logo" class="h-12 w-auto mb-4" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjQwIiB2aWV3Qm94PSIwIDAgMTIwIDQwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cmVjdCB3aWR0aD0iMTIwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjOEIxNTM4Ii8+Cjx0ZXh0IHg9IjYwIiB5PSIyNSIgZm9udC1mYW1pbHk9Ik1vbnRzZXJyYXQiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtd2VpZ2h0PSI2MDAiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5JTVBBQ1QgSU5TVVJBTkNFPC90ZXh0Pgo8L3N2Zz4K'">
+                    <p class="text-gray-300 mb-4">
+                        Africa's trusted partner in financial protection. Providing comprehensive insurance solutions
+                        for families, businesses, and communities across the continent.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-heading font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-300 hover:text-white">About Us</a></li>
+                        <li><a href="products.html" class="text-gray-300 hover:text-white">Products</a></li>
+                        <li><a href="customers.html" class="text-gray-300 hover:text-white">Customer Portal</a></li>
+                        <li><a href="careers.html" class="text-gray-300 hover:text-white">Careers</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-heading font-semibold mb-4">Products</h3>
+                    <ul class="space-y-2">
+                        <li><a href="products/life.html" class="text-gray-300 hover:text-white">Life Insurance</a></li>
+                        <li><a href="products/micro.html" class="text-gray-300 hover:text-white">Micro-Insurance</a></li>
+                        <li><a href="products/savings.html" class="text-gray-300 hover:text-white">Savings & Investment</a></li>
+                        <li><a href="products/group.html" class="text-gray-300 hover:text-white">Group Insurance</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-heading font-semibold mb-4">Contact Info</h3>
+                    <div class="space-y-2 text-gray-300">
+                        <p><i class="fas fa-map-marker-alt mr-2"></i>Nairobi, Kenya</p>
+                        <p><i class="fas fa-phone mr-2"></i>+254 700 123 456</p>
+                        <p><i class="fas fa-envelope mr-2"></i>info@impactinsurance.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">
+                    &copy; 2024 Impact Insurance. All rights reserved.
+                </p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', function() {
+                const targetId = this.getAttribute('data-target');
+                const content = document.getElementById(targetId);
+                const icon = this.querySelector('i');
+
+                // Toggle content visibility
+                content.classList.toggle('hidden');
+
+                // Rotate icon
+                icon.classList.toggle('rotate-180');
+            });
+        });
+    </script>
+</body>
+</html>

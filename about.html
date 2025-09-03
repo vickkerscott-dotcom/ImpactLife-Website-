@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      About Us - Impact Insurance | Africa's Trusted Financial Protection
+      Partner
+    </title>
+    <meta
+      name="description"
+      content="Learn about Impact Insurance's mission to provide comprehensive financial protection across Africa. Discover our values, leadership team, and commitment to excellence."
+    />
+    <meta
+      name="keywords"
+      content="about impact insurance, mission, vision, values, leadership, africa insurance, financial protection"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "brand-maroon": "#8B1538",
+              "brand-beige": "#F5F5DC",
+              "brand-dark": "#2C1810",
+            },
+            fontFamily: {
+              heading: ["Montserrat", "sans-serif"],
+              body: ["Lato", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Lato:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Impact Insurance",
+        "url": "https://impactinsurance.com",
+        "logo": "https://impactinsurance.com/assets/images/logo.png",
+        "description": "Africa's trusted partner in financial protection, providing comprehensive insurance solutions for families, businesses, and communities.",
+        "foundingDate": "2000",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "10 Yiyiwa Road ajacent the Lincoln Community School",
+          "addressLocality": "Abelemkpe, Accra",
+          "addressCountry": "GH"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+254-700-123-456",
+          "contactType": "customer service"
+        }
+      }
+    </script>
+  </head>
+  <body class="font-body text-gray-800">
+    <!-- Header -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+      <nav
+        class="container mx-auto px-4 py-4 flex items-center justify-between"
+      >
+        <div class="flex items-center">
+          <a href="index.html">
+            <img
+              src="assets/images/logo.png"
+              alt="Impact Insurance Logo"
+              class="h-12 w-auto"
+              onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjQwIiB2aWV3Qm94PSIwIDAgMTIwIDQwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cmVjdCB3aWR0aD0iMTIwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjOEIxNTM4Ii8+Cjx0ZXh0IHg9IjYwIiB5PSIyNSIgZm9udC1mYW1pbHk9Ik1vbnRzZXJyYXQiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtd2VpZ2h0PSI2MDAiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5JTVBBQ1QgSU5TVVJBTkNFPC90ZXh0Pgo8L3N2Zz4K'"
+            />
+          </a>
+        </div>
+        <div class="hidden md:flex items-center space-x-8">
+          <a
+            href="index.html"
+            class="text-gray-700 hover:text-brand-maroon font-medium"
+            >Home</a
+          >
+          <a href="about.html" class="text-brand-maroon font-medium">About</a>
+          <a
+            href="products.html"
+            class="text-gray-700 hover:text-brand-maroon font-medium"
+            >Products</a
+          >
+          <a
+            href="customers.html"
+            class="text-gray-700 hover:text-brand-maroon font-medium"
+            >Customers</a
+          >
+          <a
+            href="careers.html"
+            class="text-gray-700 hover:text-brand-maroon font-medium"
+            >Careers</a
+          >
+          <a
+            href="blog.html"
+            class="text-gray-700 hover:text-brand-maroon font-medium"
+            >Blog</a
+          >
+          <a
+            href="contact.html"
+            class="text-gray-700 hover:text-brand-maroon font-medium"
+            >Contact</a
+          >
+        </div>
+        <div class="flex items-center space-x-4">
+          <a
+            href="#"
+            class="bg-brand-maroon text-white px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors"
+            >Get a Quote</a
+          >
+          <button class="md:hidden text-gray-700" id="mobile-menu-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+      <!-- Mobile Menu -->
+      <div
+        class="md:hidden bg-white border-t border-gray-200 hidden"
+        id="mobile-menu"
+      >
+        <div class="px-4 py-2 space-y-2">
+          <a
+            href="index.html"
+            class="block text-gray-700 hover:text-brand-maroon font-medium py-2"
+            >Home</a
+          >
+          <a href="about.html" class="block text-brand-maroon font-medium py-2"
+            >About</a
+          >
+          <a
+            href="products.html"
+            class="block text-gray-700 hover:text-brand-maroon font-medium py-2"
+            >Products</a
+          >
+          <a
+            href="customers.html"
+            class="block text-gray-700 hover:text-brand-maroon font-medium py-2"
+            >Customers</a
+          >
+          <a
+            href="careers.html"
+            class="block text-gray-700 hover:text-brand-maroon font-medium py-2"
+            >Careers</a
+          >
+          <a
+            href="blog.html"
+            class="block text-gray-700 hover:text-brand-maroon font-medium py-2"
+            >Blog</a
+          >
+          <a
+            href="contact.html"
+            class="block text-gray-700 hover:text-brand-maroon font-medium py-2"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section
+        class="relative py-32 bg-gradient-to-r from-brand-maroon to-red-700 text-white"
+      >
+        <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+        <div class="relative container mx-auto px-4 text-center">
+          <h1 class="text-4xl md:text-6xl font-heading font-bold mb-6">
+            About Impact Insurance
+          </h1>
+          <p class="text-xl md:text-2xl max-w-3xl mx-auto">
+            Africa's trusted partner in financial protection for over two
+            decades
+          </p>
+        </div>
+      </section>
+
+      <!-- Mission, Vision, Values -->
+      <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+          <div class="grid md:grid-cols-3 gap-12">
+            <div class="text-center">
+              <div
+                class="bg-brand-maroon text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6"
+              >
+                <i class="fas fa-bullseye text-3xl"></i>
+              </div>
+              <h2
+                class="text-2xl font-heading font-bold text-brand-maroon mb-4"
+              >
+                Our Mission
+              </h2>
+              <p class="text-gray-700 leading-relaxed">
+                To provide accessible, comprehensive financial protection
+                solutions that empower African families, businesses, and
+                communities to thrive with confidence and security.
+              </p>
+            </div>
+            <div class="text-center">
+              <div
+                class="bg-brand-maroon text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6"
+              >
+                <i class="fas fa-eye text-3xl"></i>
+              </div>
+              <h2
+                class="text-2xl font-heading font-bold text-brand-maroon mb-4"
+              >
+                Our Vision
+              </h2>
+              <p class="text-gray-700 leading-relaxed">
+                To be Africa's most trusted and innovative insurance provider,
+                setting the standard for excellence in financial protection and
+                customer service across the continent.
+              </p>
+            </div>
+            <div class="text-center">
+              <div
+                class="bg-brand-maroon text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6"
+              >
+                <i class="fas fa-heart text-3xl"></i>
+              </div>
+              <h2
+                class="text-2xl font-heading font-bold text-brand-maroon mb-4"
+              >
+                Our Values
+              </h2>
+              <ul class="text-gray-700 space-y-2">
+                <li>
+                  <strong>Integrity:</strong> We act with honesty and
+                  transparency
+                </li>
+                <li>
+                  <strong>Excellence:</strong> We strive for the highest
+                  standards
+                </li>
+                <li>
+                  <strong>Innovation:</strong> We embrace new ideas and
+                  technologies
+                </li>
+                <li>
+                  <strong>Community:</strong> We serve and support our
+                  communities
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Our Story -->
+      <section class="py-20 bg-brand-beige">
+        <div class="container mx-auto px-4">
+          <div class="max-w-4xl mx-auto">
+            <h2
+              class="text-3xl md:text-4xl font-heading font-bold text-brand-maroon text-center mb-12"
+            >
+              Our Story
+            </h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+              <div>
+                <h3
+                  class="text-2xl font-heading font-semibold text-brand-dark mb-4"
+                >
+                  Founded in 2000
+                </h3>
+                <p class="text-gray-700 mb-6 leading-relaxed">
+                  Impact Insurance was born from a simple yet powerful idea:
+                  that every African deserves access to reliable financial
+                  protection. Founded in Nairobi, Kenya, we started as a small
+                  team with a big vision to transform the insurance landscape
+                  across Africa.
+                </p>
+                <p class="text-gray-700 leading-relaxed">
+                  What began as a commitment to serve local communities has
+                  grown into a comprehensive insurance provider trusted by
+                  millions across the continent. Our journey has been guided by
+                  innovation, cultural understanding, and an unwavering
+                  dedication to our customers.
+                </p>
+              </div>
+              <div class="relative">
+                <img
+                  src="https://images.unsplash.com/photo-1522204523234-8729aa6e3d5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+                  alt="Impact Insurance Team"
+                  class="rounded-lg shadow-xl w-full"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Timeline -->
+      <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+          <h2
+            class="text-3xl md:text-4xl font-heading font-bold text-brand-maroon text-center mb-16"
+          >
+            Our Journey
+          </h2>
+          <div class="max-w-4xl mx-auto">
+            <div class="relative">
+              <!-- Timeline line -->
+              <div
+                class="absolute left-8 top-0 bottom-0 w-0.5 bg-brand-maroon"
+              ></div>
+
+              <div class="space-y-12">
+                <div class="relative flex items-start">
+                  <div
+                    class="flex-shrink-0 w-16 h-16 bg-brand-maroon text-white rounded-full flex items-center justify-center text-xl font-bold"
+                  >
+                    2000
+                  </div>
+                  <div class="ml-8">
+                    <h3
+                      class="text-xl font-heading font-semibold text-brand-maroon mb-2"
+                    >
+                      Company Founded
+                    </h3>
+                    <p class="text-gray-700">
+                      Impact Insurance established in Nairobi with a mission to
+                      provide accessible life insurance across East Africa.
+                    </p>
+                  </div>
+                </div>
+                <div class="relative flex items-start">
+                  <div
+                    class="flex-shrink-0 w-16 h-16 bg-brand-maroon text-white rounded-full flex items-center justify-center text-xl font-bold"
+                  >
+                    2005
+                  </div>
+                  <div class="ml-8">
+                    <h3
+                      class="text-xl font-heading font-semibold text-brand-maroon mb-2"
+                    >
+                      Regional Expansion
+                    </h3>
+                    <p class="text-gray-700">
+                      Expanded operations to West and Southern Africa,
+                      introducing micro-insurance products for small businesses.
+                    </p>
+                  </div>
+                </div>
+                <div class="relative flex items-start">
+                  <div
+                    class="flex-shrink-0 w-16 h-16 bg-brand-maroon text-white rounded-full flex items-center justify-center text-xl font-bold"
+                  >
+                    2010
+                  </div>
+                  <div class="ml-8">
+                    <h3
+                      class="text-xl font-heading font-semibold text-brand-maroon mb-2"
+                    >
+                      Digital Transformation
+                    </h3>
+                    <p class="text-gray-700">
+                      Launched digital self-service platform, making insurance
+                      accessible through mobile technology.
+                    </p>
+                  </div>
+                </div>
+                <div class="relative flex items-start">
+                  <div
+                    class="flex-shrink-0 w-16 h-16 bg-brand-maroon text-white rounded-full flex items-center justify-center text-xl font-bold"
+                  >
+                    2015
+                  </div>
+                  <div class="ml-8">
+                    <h3
+                      class="text-xl font-heading font-semibold text-brand-maroon mb-2"
+                    >
+                      Innovation Leadership
+                    </h3>
+                    <p class="text-gray-700">
+                      Introduced investment-linked insurance products and
+                      expanded group insurance solutions.
+                    </p>
+                  </div>
+                </div>
+                <div class="relative flex items-start">
+                  <div
+                    class="flex-shrink-0 w-16 h-16 bg-brand-maroon text-white rounded-full flex items-center justify-center text-xl font-bold"
+                  >
+                    2020
+                  </div>
+                  <div class="ml-8">
+                    <h3
+                      class="text-xl font-heading font-semibold text-brand-maroon mb-2"
+                    >
+                      COVID-19 Response
+                    </h3>
+                    <p class="text-gray-700">
+                      Rapidly adapted services to support communities during the
+                      pandemic with flexible payment options and quick claims
+                      processing.
+                    </p>
+                  </div>
+                </div>
+                <div class="relative flex items-start">
+                  <div
+                    class="flex-shrink-0 w-16 h-16 bg-brand-maroon text-white rounded-full flex items-center justify-center text-xl font-bold"
+                  >
+                    2024
+                  </div>
+                  <div class="ml-8">
+                    <h3
+                      class="text-xl font-heading font-semibold text-brand-maroon mb-2"
+                    >
+                      Sustainable Growth
+                    </h3>
+                    <p class="text-gray-700">
+                      Celebrating 2 million customers and continuing our
+                      commitment to innovation and community support across
+                      Africa.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Leadership Team -->
+      <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+          <h2
+            class="text-3xl md:text-4xl font-heading font-bold text-brand-maroon text-center mb-16"
+          >
+            Leadership Team
+          </h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+              <img
+                src="assets/images/Sheriff.png"
+                alt="CEO - Sheriff Abudu"
+                class="w-full h-48 object-cover cursor-pointer"
+                onclick="openModal('sheriff')"
+              />
+              <div class="p-4">
+                <h3
+                  class="text-lg font-heading font-semibold text-brand-maroon mb-1"
+                >
+                  Sheriff Abudu
+                </h3>
+                <p class="text-brand-maroon font-medium text-sm mb-2">
+                  Managing Director/CEO
+                </p>
+              </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+              <img
+                src="assets/images/Sylvester.jpg"
+                alt="COO - Sylvester Acheampong"
+                class="w-full h-48 object-cover cursor-pointer"
+                onclick="openModal('sylvester')"
+              />
+              <div class="p-4">
+                <h3
+                  class="text-lg font-heading font-semibold text-brand-maroon mb-1"
+                >
+                  Sylvester Acheampong
+                </h3>
+                <p class="text-brand-maroon font-medium text-sm mb-2">
+                  Chief Operations Officer
+                </p>
+              </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+              <img
+                src="assets/images/Emmanuel.png"
+                alt="CFO - Emmanuel Owusu-Afriyie"
+                class="w-full h-48 object-cover cursor-pointer"
+                onclick="openModal('emmanuel')"
+              />
+              <div class="p-4">
+                <h3
+                  class="text-lg font-heading font-semibold text-brand-maroon mb-1"
+                >
+                  Emmanuel Owusu-Afriyie
+                </h3>
+                <p class="text-brand-maroon font-medium text-sm mb-2">
+                  Chief Financial Officer
+                </p>
+              </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+              <img
+                src="assets/images/Josephine.jpg"
+                alt="Executive Head HR - Josephine Frimpong"
+                class="w-full h-48 object-cover cursor-pointer"
+                onclick="openModal('josephine')"
+              />
+              <div class="p-4">
+                <h3
+                  class="text-lg font-heading font-semibold text-brand-maroon mb-1"
+                >
+                  Josephine Frimpong
+                </h3>
+                <p class="text-brand-maroon font-medium text-sm mb-2">
+                  Executive Head, HR & Admin
+                </p>
+              </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+              <img
+                src="assets/images/kwame.jpg"
+                alt="CIO - Kwame Manu-Antwi"
+                class="w-full h-48 object-cover cursor-pointer"
+                onclick="openModal('kwame')"
+              />
+              <div class="p-4">
+                <h3
+                  class="text-lg font-heading font-semibold text-brand-maroon mb-1"
+                >
+                  Kwame Manu-Antwi
+                </h3>
+                <p class="text-brand-maroon font-medium text-sm mb-2">
+                  Chief Information Officer
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="text-center mt-12">
+            <a
+              href="contact.html"
+              class="inline-block bg-brand-maroon text-white px-8 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-colors"
+            >
+              Contact Leadership Office
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Modal -->
+      <div
+        id="profileModal"
+        class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4"
+      >
+        <div
+          class="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+        >
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-4">
+              <h3
+                id="modalTitle"
+                class="text-2xl font-heading font-bold text-brand-maroon"
+              ></h3>
+              <button
+                onclick="closeModal()"
+                class="text-gray-500 hover:text-gray-700 text-2xl"
+              >
+                &times;
+              </button>
+            </div>
+            <div class="flex flex-col md:flex-row gap-6">
+              <div class="md:w-1/3">
+                <img
+                  id="modalImage"
+                  src=""
+                  alt=""
+                  class="w-full h-64 object-cover rounded-lg"
+                />
+              </div>
+              <div class="md:w-2/3">
+                <h4
+                  id="modalPosition"
+                  class="text-xl font-semibold text-brand-maroon mb-4"
+                ></h4>
+                <div id="modalContent" class="text-gray-700 space-y-3"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Regulatory Information -->
+      <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+          <h2
+            class="text-3xl md:text-4xl font-heading font-bold text-brand-maroon text-center mb-12"
+          >
+            Regulatory Compliance & Governance
+          </h2>
+          <div class="max-w-4xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12">
+              <div>
+                <h3
+                  class="text-2xl font-heading font-semibold text-brand-maroon mb-4"
+                >
+                  Licensed & Regulated
+                </h3>
+                <p class="text-gray-700 mb-6">
+                  Impact Insurance is fully licensed and regulated by insurance
+                  authorities across all markets we serve. We maintain the
+                  highest standards of corporate governance and regulatory
+                  compliance.
+                </p>
+                <ul class="space-y-3 text-gray-700">
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-brand-maroon mt-1 mr-3"></i>
+                    <span>IRA Kenya License No. IL/001/2024</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-brand-maroon mt-1 mr-3"></i>
+                    <span>NIS Nigeria License No. IL/NG/002/2024</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-brand-maroon mt-1 mr-3"></i>
+                    <span>IAR Zimbabwe License No. IL/ZW/003/2024</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-brand-maroon mt-1 mr-3"></i>
+                    <span>FSCA South Africa License No. IL/ZA/004/2024</span>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3
+                  class="text-2xl font-heading font-semibold text-brand-maroon mb-4"
+                >
+                  Our Commitments
+                </h3>
+                <p class="text-gray-700 mb-6">
+                  We are committed to maintaining transparency, ethical
+                  practices, and customer protection in all our operations
+                  across Africa.
+                </p>
+                <ul class="space-y-3 text-gray-700">
+                  <li class="flex items-start">
+                    <i
+                      class="fas fa-shield-alt text-brand-maroon mt-1 mr-3"
+                    ></i>
+                    <span>Customer data protection and privacy</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i
+                      class="fas fa-balance-scale text-brand-maroon mt-1 mr-3"
+                    ></i>
+                    <span>Fair claims settlement practices</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i
+                      class="fas fa-file-contract text-brand-maroon mt-1 mr-3"
+                    ></i>
+                    <span>Clear and transparent policy terms</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-users text-brand-maroon mt-1 mr-3"></i>
+                    <span>Community investment and support</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="py-20 bg-brand-maroon text-white">
+        <div class="container mx-auto px-4 text-center">
+          <h2 class="text-3xl md:text-4xl font-heading font-bold mb-6">
+            Ready to Protect What Matters Most?
+          </h2>
+          <p class="text-xl mb-8 max-w-2xl mx-auto">
+            Join millions of Africans who trust Impact Insurance for their
+            financial protection needs.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="#"
+              class="inline-block bg-white text-brand-maroon px-8 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-colors"
+            >
+              Get a Quote
+            </a>
+            <a
+              href="contact.html"
+              class="inline-block border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-brand-maroon transition-colors"
+            >
+              Contact Us
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white py-16">
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+          <div>
+            <img
+              src="assets/images/logo.png"
+              alt="Impact Insurance Logo"
+              class="h-12 w-auto mb-4"
+              onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjQwIiB2aWV3Qm94PSIwIDAgMTIwIDQwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cmVjdCB3aWR0aD0iMTIwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjOEIxNTM4Ii8+Cjx0ZXh0IHg9IjYwIiB5PSIyNSIgZm9udC1mYW1pbHk9Ik1vbnRzZXJyYXQiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtd2VpZ2h0PSI2MDAiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5JTVBBQ1QgSU5TVVJBTkNFPC90ZXh0Pgo8L3N2Zz4K'"
+            />
+            <p class="text-gray-300 mb-4">
+              Africa's trusted partner in financial protection. Providing
+              comprehensive insurance solutions for families, businesses, and
+              communities across the continent.
+            </p>
+            <div class="flex space-x-4">
+              <a href="#" class="text-gray-300 hover:text-white"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="text-gray-300 hover:text-white"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="text-gray-300 hover:text-white"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a href="#" class="text-gray-300 hover:text-white"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-lg font-heading font-semibold mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="about.html" class="text-gray-300 hover:text-white"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a href="products.html" class="text-gray-300 hover:text-white"
+                  >Products</a
+                >
+              </li>
+              <li>
+                <a href="customers.html" class="text-gray-300 hover:text-white"
+                  >Customer Portal</a
+                >
+              </li>
+              <li>
+                <a href="careers.html" class="text-gray-300 hover:text-white"
+                  >Careers</a
+                >
+              </li>
+              <li>
+                <a href="contact.html" class="text-gray-300 hover:text-white"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-heading font-semibold mb-4">Products</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="products/life.html"
+                  class="text-gray-300 hover:text-white"
+                  >Life Insurance</a
+                >
+              </li>
+              <li>
+                <a
+                  href="products/micro.html"
+                  class="text-gray-300 hover:text-white"
+                  >Micro-Insurance</a
+                >
+              </li>
+              <li>
+                <a
+                  href="products/savings.html"
+                  class="text-gray-300 hover:text-white"
+                  >Savings & Investment</a
+                >
+              </li>
+              <li>
+                <a
+                  href="products/group.html"
+                  class="text-gray-300 hover:text-white"
+                  >Group Insurance</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-heading font-semibold mb-4">
+              Contact Info
+            </h3>
+            <div class="space-y-2 text-gray-300">
+              <p><i class="fas fa-map-marker-alt mr-2"></i>Nairobi, Kenya</p>
+              <p><i class="fas fa-phone mr-2"></i>+254 700 123 456</p>
+              <p>
+                <i class="fas fa-envelope mr-2"></i>info@impactinsurance.com
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-gray-400 text-sm">
+            &copy; 2024 Impact Insurance. All rights reserved.
+          </p>
+          <div class="flex space-x-6 mt-4 md:mt-0">
+            <a href="#" class="text-gray-400 hover:text-white text-sm"
+              >Privacy Policy</a
+            >
+            <a href="#" class="text-gray-400 hover:text-white text-sm"
+              >Terms of Service</a
+            >
+            <a href="#" class="text-gray-400 hover:text-white text-sm"
+              >Cookie Policy</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      document
+        .getElementById("mobile-menu-toggle")
+        .addEventListener("click", function () {
+          document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+
+      // Leadership profile modal
+      const profiles = {
+        sheriff: {
+          name: "Sheriff Abudu",
+          position: "Managing Director/Chief Executive Officer",
+          image: "assets/images/Sheriff.png",
+          content: `
+                    <p>Sheriff has over 20 years of experience in the financial services industry (banking and insurance) in sales, business development and senior executive leadership. He is a Fellow of the Chartered Insurance Institute of Ghana (FCIIG), a Chartered Insurer and a Senior Associate member of the Australian & New Zealand Institute of Insurance & Finance (ANZIIF). He holds an MA in Mass Communications from the University of Leicester, UK, and a BA in Social Sciences (Economics, Law and Sociology) from the Kwame Nkrumah University of Science & Technology, Kumasi, Ghana.</p>
+                    <p>Before his current role, he was the Chief Executive Officer of Ghana Life Insurance Company, the Managing Director of Unique Life Insurance Company and General Manager, Business Development at MiLife Insurance where he was instrumental in restructuring the distribution, sales, and marketing operations, which helped grow the premium income of the company by a huge margin over 5 years. He is a member of the Ghana Insurance Association (GIA) Board and also a Life Council member of the GIA. He was also a Convener and Chairman of the Sales and Marketing Technical Committee of the GIA and a member of the Client Rescue Fund Committee of the National Insurance Commission (NIC). Sheriff has attended numerous training programs in the United Kingdom, Algeria, Malaysia, United Arab Emirates, Kenya, Tanzania, Egypt, and Cote d'Ivoire.</p>
+                `,
+        },
+        sylvester: {
+          name: "Sylvester Acheampong",
+          position: "Chief Operations Officer",
+          image: "assets/images/Sylvester.jpg",
+          content: `
+                    <p>Sylvester has over 15 years of experience in the insurance industry with a focus on life insurance, reinsurance, and risk management. He is a Chartered Insurer, a Senior Associate member of the Australian & New Zealand Institute of Finance (ANZIIF), a member of the Chartered Insurance Institute (UK), an Associate member of the Chartered Insurance Institute of Ghana (CIIG), and a member of the Institute of Chartered Accounts, Ghana. He holds a Master of Science (MSc.) in Accounting and Finance and a Bachelor of Science (BSc.) in Postharvest Technology, all from the University of Ghana.</p>
+                    <p>Before joining our team, Sylvester served as the Head of Underwriting at Allianz Life, where he significantly contributed to strengthening the underwriting function and later took on the role of a Senior Underwriting Officer at Ghana Reinsurance Plc. He also earned both a diploma and an advanced diploma in Applied Insurance Studies (AAIS) from the Malta International Training Center and Ghana Insurance College.</p>
+                `,
+        },
+        emmanuel: {
+          name: "Emmanuel Owusu-Afriyie",
+          position: "Chief Financial Officer",
+          image: "assets/images/Emmanuel.png",
+          content: `
+                    <p>Emmanuel Owusu-Afriyie has over 25 years of experience in insurance, banking, manufacturing, and public sectors, with expertise in corporate finance, risk management, treasury management, financial reporting, and auditing. He is a Chartered Accountant and a member of the Institute of Chartered Accountants, Ghana. He holds an Executive Masters in Business Administration (Banking & Finance) from Kwame Nkrumah University of Science and Technology and has completed various executive training programs in South Africa, the United Kingdom, Singapore, the United States, and the Netherlands.</p>
+                    <p>Before his current role, Emmanuel served as the Chief Financial Officer at Multi Insurance Company, where he was instrumental in developing control systems, accounting and finance procedural manuals, policy manuals, and risk management modules. Emmanuel has also participated in numerous training programs and further honing his skills in time management, treasury and working capital management, team development and management, budgetary control, strategic thinking and decision making, as well as advanced credit, risk, and financial analysis.</p>
+                `,
+        },
+        josephine: {
+          name: "Josephine Frimpong",
+          position: "Executive Head, HR & Administration",
+          image: "assets/images/Josephine.jpg",
+          content: `
+                    <p>Josephine is a Human Resource Practitioner with over 20 years of experience in the fields of administration, human resource management, human resource development and corporate governance. She has a Post Graduate Diploma in Organization Development and a Bachelor of Arts Secretaryship (French option) both from the University of Cape Coast. She is a Chartered Corporate Governance professional with the Institute of Chartered Secretaries and Administrators (UK) now Chartered Governance Institute (UK).</p>
+                    <p>Before joining the company, she was an Independent HR & Organisational Development Consultant, a Career Direct Consultant/Coach and a Company Secretary for Sabre Education Limited, an international NGO based in Accra. She has served as Head of Human Resources for UT Holdings Limited, HR Service Delivery Manager for UT Holdings, Recruitment & Talent Development Manager for UT Bank, and Assistant Administrative Manager for UT Financial Services Ltd. She has varied expertise in the fields of Administration, Organization Development, Human Resources Management, Learning and Development and Corporate Governance.</p>
+                `,
+        },
+        kwame: {
+          name: "Kwame Manu-Antwi",
+          position: "Chief Information Officer",
+          image: "assets/images/kwame.jpg",
+          content: `
+                    <p>Kwame Manu-Antwi is a seasoned IT Executive with over 20 years of experience delivering technology-driven business transformation across West Africa in the insurance, FMCG, telecommunications, and agribusiness sectors. Before joining Impact Life, Kwame served as IT Operations Manager at miLife Insurance, where he led operational technology initiatives, modernized IT infrastructure, and championed digital customer engagement platforms. Earlier in his career, he spent over fourteen years at Unilever, rising to become Regional IT Manager, West Africa, where he shaped IT strategy, built high-performing teams, and drove cross-market digital transformation programs across Ghana, Nigeria, and French West Africa.</p>
+                    <p>Known for his ability to bridge business strategy with innovative technology solutions, Kwame specializes in IT strategy, digital transformation, artificial intelligence, automation, ERP implementation, governance, analytics, and business process redesign. His leadership philosophy blends a strong business partnership approach with a relentless focus on scalability, operational excellence, and measurable value creation. Kwame is a Certified PRINCE II Project Practitioner and certified in the Governance of Enterprise IT (CGEIT) by the Information Systems Audit and Control Association (ISACA). He holds a Bachelor of Science degree in Computer Science and Statistics from the University of Ghana and a Master of Science degree in Management Information Systems from Coventry University.</p>
+                `,
+        },
+      };
+
+      function openModal(profileId) {
+        const profile = profiles[profileId];
+        if (!profile) return;
+
+        document.getElementById("modalTitle").textContent = profile.name;
+        document.getElementById("modalPosition").textContent = profile.position;
+        document.getElementById("modalImage").src = profile.image;
+        document.getElementById("modalImage").alt = profile.name;
+        document.getElementById("modalContent").innerHTML = profile.content;
+
+        document.getElementById("profileModal").classList.remove("hidden");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeModal() {
+        document.getElementById("profileModal").classList.add("hidden");
+        document.body.style.overflow = "auto";
+      }
+
+      // Close modal when clicking outside
+      document
+        .getElementById("profileModal")
+        .addEventListener("click", function (e) {
+          if (e.target === this) {
+            closeModal();
+          }
+        });
+
+      // Close modal with Escape key
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          closeModal();
+        }
+      });
+    </script>
+  </body>
+</html>
